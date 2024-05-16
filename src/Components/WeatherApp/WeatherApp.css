@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Jersey+20+Charted&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Varela+Round&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Jersey+20+Charted&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  scrollbar-width: none;
+}
+
+.container {
+  width: 50vw;
+  height: 90vh;
+  margin: auto;
+  overflow: scroll;
+  padding: 10% 0% 5% 0%;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(176, 150, 236) 0%,
+    rgb(205, 182, 239) 100%
+  );
+}
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.cityInput {
+  display: flex;
+  width: 65%;
+  height: 75px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px 0 0 50px;
+  padding-left: 5%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: black;
+}
+.search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  width: 75px;
+  border-radius: 0 50px 50px 0;
+  border: none;
+  outline: none;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.search-icon:hover {
+  background: rgb(148, 148, 148);
+}
+.search-icon:active {
+  background: rgb(255, 255, 255);
+  transform: scale(0.9);
+}
+
+.search-icon img {
+  width: 50%;
+  height: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-icon img:hover {
+  transform: scale(1.2);
+  /* transition: all 0.2s ease; */
+}
+.search-icon img:hover {
+  transform: scale(0.9);
+}
+
+.discription {
+  font-weight: 500;
+  font-size: 2rem;
+  font-variant-caps: all-small-caps;
+  font-family: "Tomorrow", sans-serif;
+}
+
+.weather-image {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  margin-top: 5%;
+  flex-direction: column;
+  gap: 5%;
+  font-size: 2rem;
+}
+
+.weather-temp,
+.weather-location {
+  color: rgb(63, 63, 63);
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+.weather-image img {
+  height: 75%;
+}
+
+.data-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  padding-top: 5%;
+  font-size: 1.5rem;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.data .icon {
+  width: 75px;
+  height: 75px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 80vw;
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 10% 0 10% 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 10% 0 10% 0;
+  }
+  .data-container {
+    margin-top: 10%;
+  }
+
+  .cityInput {
+    width: 80%;
+  }
+}
